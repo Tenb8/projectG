@@ -1,0 +1,594 @@
+   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuKQE3aIoIo9OBQf9vj1pC60hXbTdenRc&amp;sensor=true"></script>
+<script type="text/javascript">
+var map;
+  
+function initialize() {
+	var myOptions = {
+	  center: new google.maps.LatLng(50.143664,6.067918), //weiswampach
+	  zoom: 3,
+	  mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+	var canvas = document.getElementById("map_canvas");
+	map = new google.maps.Map(canvas, myOptions);
+	
+	var myLatlng;
+	var marker;
+	var image;
+	var infowindow = new google.maps.InfoWindow({
+    	content:"Loading..."
+	});
+	
+	
+	myLatlng = new google.maps.LatLng(42.6951969,23.328718200000026)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"Kangaroo-Trans EOOD",
+	  html:"<h3>Kangaroo-Trans EOOD</h3><p>bul. Tzar Osvoboditel 8, et.3<br/>1000  Sofia<br/>Bulgarie</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(51.2791219,4.183018299999958)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"De Bock Gebroeders N.V.",
+	  html:"<h3>De Bock Gebroeders N.V.</h3><p>Kreek 31-33<br/>9130 Kieldrecht<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(51.2688603,4.400606299999936)
+	image = "../modules/3286/pins/warehouse.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"De Bock Gebroeders N.V.",
+	  html:"<h3>De Bock Gebroeders N.V.</h3><p>Luithagen-Haven 8, Haven 200<br/>2030 Antwerpen<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(51.3210603,3.197586499999943)
+	image = "../modules/3286/pins/warehouse.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"De Bock Gebroeders N.V.",
+	  html:"<h3>De Bock Gebroeders N.V.</h3><p>Marcus Gerardsstraat 12<br/>8380 Zeebrugge<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(50.69648979999999,5.6078396999999995)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"GEMA s.a.",
+	  html:"<h3>GEMA s.a.</h3><p>Avenue du Parc Industriel<br/>4040 Milmort<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(50.41650,6.00587)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"GEMA s.a.",
+	  html:"<h3>GEMA s.a.</h3><p>Zoning Industriel<br/>O l'z-Eyôs 3<br/>4960 Malmedy<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(52.1384875,21.045780199999967)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"GO-TRANS GmbH  Sp. Z.o.o.",
+	  html:"<h3>GO-TRANS GmbH  Sp. Z.o.o.</h3><p>Ul. Kazury 2/28<br/>02-795 Warszawa<br/>Pologne</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(36.76667,10.28333)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"JOST TUNISIA s.a.r.l.",
+	  html:"<h3>JOST TUNISIA s.a.r.l.</h3><p>Immeuble STUMAR<br/>Zone portuaire de Radès<br/>2040 Radès<br/>Tunisie</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(49.742751,5.016599000000042)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"Jost S.A.R.L.",
+	  html:"<h3>Jost S.A.R.L.</h3><p>Plate-Forme Douanière n° 5<br/>Bâtiment dit « des Transitaires »<br/>08200  La Chapelle<br/>France</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(50.8716392,4.509913900000015)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"Jost & Cie S.A.",
+	  html:"<h3>Jost & Cie S.A.</h3><p>Mechelsesteenweg 406<br/>1930 ZAVENTEM<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(50.1433265,6.067675799999961)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"JOST GROUP s.a.",
+	  html:"<img src='/modules/3286/images/876_thumb.jpg' /><h3>JOST GROUP s.a.</h3><p>Am Hock 1<br/>9991 Weiswampach<br/>Luxembourg</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(50.14284929999999,6.06752449999999)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"JOST s.a.",
+	  html:"<h3>JOST s.a.</h3><p>Am Hock 2<br/>9991 Weiswampach<br/>Luxembourg</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(50.1433265,6.067675799999961)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"JOST MANAGEMENT s.a.",
+	  html:"<h3>JOST MANAGEMENT s.a.</h3><p>Am Hock 1<br/>9991 Weiswampach<br/>Luxembourg</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(50.6496401,5.815180999999939)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"JOST & Cie S.A.",
+	  html:"<h3>JOST & Cie S.A.</h3><p>4ème Avenue 66<br/>4040 Herstal<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(50.6996783,5.6200350999999955)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"JOST LOGISTICS s.a.",
+	  html:"<h3>JOST LOGISTICS s.a.</h3><p>4ème Avenue 66  <br/>4040 Herstal<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(51.1022255,4.448783700000035)
+	image = "../modules/3286/pins/warehouse.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"Jost & Cie N.V.",
+	  html:"<h3>Jost & Cie N.V.</h3><p>Herman De Nayerstraat, 8<br/>2550  Kontich-Waarloos<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(45.616292,9.309995999999956)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"JOST Italia s.r.l.",
+	  html:"<h3>JOST Italia s.r.l.</h3><p>Via Modigliani, 27<br/>20852   Villasanta<br/>Italie</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(45.4688045,9.165177800000038)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"JOST Italia s.r.l.",
+	  html:"<h3>JOST Italia s.r.l.</h3><p>Via Bernardino Telesio 2<br/>20145 Milano<br/>Italie</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(50.4768201,3.8666364000000613)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"JOST LOGISTICS S.A.",
+	  html:"<h3>JOST LOGISTICS S.A.</h3><p>Route de Wallonie 142<br/>7011 Ghlin<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(50.6468151,5.806389399999944)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"JOST LOGISTICS S.A.",
+	  html:"<h3>JOST LOGISTICS S.A.</h3><p>Rue Chesseroux 23<br/>4651 Battice<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(50.692451,5.636188)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"JOST LOGISTICS S.A.",
+	  html:"<h3>JOST LOGISTICS S.A.</h3><p>Rue de l’Abbaye 57/83<br/>4040  Herstal<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(49.5581051,5.833212099999969)
+	image = "../modules/3286/pins/warehouse.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"JOST LOGISTICS s.a.",
+	  html:"<h3>JOST LOGISTICS s.a.</h3><p>Rue des Usines 61<br/>6790 Athus<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(49.5597759,5.783659499999999)
+	image = "../modules/3286/pins/warehouse.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"JOST LOGISTICS s.a.",
+	  html:"<h3>JOST LOGISTICS s.a.</h3><p>Av. Champion 7<br/>6790 Aubange<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(49.5597759,5.783659499999999)
+	image = "../modules/3286/pins/warehouse.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"JOST LOGISTICS s.a.",
+	  html:"<h3>JOST LOGISTICS s.a.</h3><p>Av. Champion 7<br/>6790 Aubange<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(51.2685104,4.401085500000022)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"MARSHIP n.v.",
+	  html:"<h3>MARSHIP n.v.</h3><p>Luithagen-Haven 8, Haven 200<br/>2030 Antwerpen<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(48.1344409,17.193530099999975)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"SK Line sro",
+	  html:"<h3>SK Line sro</h3><p>Ulica Svornosti 42<br/>821 06 Bratislava<br/>Slovaquie</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(46.7806103,23.67382980000002)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"SKIPTRANS s.r.l.",
+	  html:"<h3>SKIPTRANS s.r.l.</h3><p>Traian Vuia 204  <br/>400606      CLUJ NAPOCA  <br/>Roumanie</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(50.69968,5.62004)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"SUPERTRANSPORT S.A.",
+	  html:"<h3>SUPERTRANSPORT S.A.</h3><p>ZI des Hauts Sarts<br/>4ème avenue 66<br/>4040 Herstal<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(50.69968650000001,5.620390499999985)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"SUPERTRANSPORT S.A.",
+	  html:"<h3>SUPERTRANSPORT S.A.</h3><p>ZI des Hauts Sart 4ème avenue 58<br/>4040 Herstal<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(50.5884886,4.356806499999948)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"SUPERTRANSPORT S.A.",
+	  html:"<h3>SUPERTRANSPORT S.A.</h3><p>Rue de l’Industrie 21<br/>1400 Nivelles<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(51.06724930000001,4.514921200000003)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"SUPERTRANSPORT S.A.",
+	  html:"<h3>SUPERTRANSPORT S.A.</h3><p>Drevendaal 3<br/>2860 Sint-Katelijne-Waver<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(51.0669866,4.516281299999946)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"SUPERTRANSPORT S.A.",
+	  html:"<h3>SUPERTRANSPORT S.A.</h3><p>Drevendaal 10<br/>2860 Sint-Katelijne-Waver<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(51.1236601,4.455394299999966)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"SUPERTRANSPORT S.A.",
+	  html:"<h3>SUPERTRANSPORT S.A.</h3><p>Neerveld 1<br/>2550 Kontich<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(50.9463994,4.429739499999982)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"SUPERTRANSPORT S.A.",
+	  html:"<h3>SUPERTRANSPORT S.A.</h3><p>Havendoklaan 18<br/>1800 Vilvoorde<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(48.1344409,17.193530099999975)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"TRANS-UNION SRO",
+	  html:"<h3>TRANS-UNION SRO</h3><p>Ulica Svornosti 42<br/>821 06 Bratislava<br/>Slovaquie</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(51.273637,4.388473)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"Jost Trucking n.v.",
+	  html:"<h3>Jost Trucking n.v.</h3><p>Luithagen-Haven 8, Haven 200<br/>2030 Antwerpen<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(50.654335,5.481710300000032)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"TTS BELGIUM SA",
+	  html:"<h3>TTS BELGIUM SA</h3><p>Rue de l'Aéropostale, 8 <br/>4460  GRACE-HOLLOGNE<br/>Belgique</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+	myLatlng = new google.maps.LatLng(45.032625,9.752608)
+	image = "../modules/3286/pins/default.png";
+	marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title:"TTS Italia srl",
+	  html:"<h3>TTS Italia srl</h3><p>Via C. Strinati 7/9<br/>Loc Le Mose<br/>29100  Piacenza<br/>Italie</p>",
+	  icon: image
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(this.html);
+		infowindow.open(map,this);
+	});
+	
+
+}    
+</script>

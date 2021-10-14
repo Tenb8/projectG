@@ -1,0 +1,25 @@
+<?php  
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
+    $societe = $_POST['societe'];
+	$adresse =$_POST['adresse'];
+    $ville = $_POST['ville'];
+	$pays = $_POST['pays'];
+    $email = $_POST['email'];
+	$telephone = $_POST['telephone'];
+    $message = $_POST['message'];
+
+$conn = new mysqli('localhost', 'root', '', 'data');
+
+if($conn->connect_error){
+    die('Connection Failed : '.$conn->connect_error);
+}else{
+    $stmt = $conn->prepare("insert into formulaire(nom, prenom, societe, adresse, ville, pays, email, telephone, message)value(?, ?, ?, ?, ?, ?, ?, ?, ?,)");
+    $stmt->bind_param("ssssssssi",$nom, $prenom, $societe, $adresse, $ville, $pays, $email,  $telephone, $message );
+    $stmt->execute();
+    echo "message envoyer.........";
+    $stmt->close();
+    $conn->close();
+}
+
+?>

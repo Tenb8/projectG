@@ -1,0 +1,141 @@
+<?php  
+
+require_once('config.php');
+
+?>
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<meta charset="utf-8">
+<head>
+	
+</head>
+<body>
+
+<div>
+	<?php 
+
+
+	?>
+
+</div>
+
+
+
+<div>
+	<form action="registration.php" method="post">
+		<div class="container">		
+			<div class="row">
+				<div class="col-sm-6">
+					<h1>Demande d’information</h1>
+					<p>Remplissez le formulaire avec les valeurs correctes.</p>
+				
+					<br>
+					<label for="nom"><b> Nom</b></label>
+					<input class="form-control" id="nom" type="text" name="nom"  placeholder="nom" required>
+					<br>
+
+					<label for="prenom"><b>Prenom</b></label>
+					<input class="form-control" id="prenom"  type="text" name="prenom"  placeholder="prenom" required>
+					<br>
+
+					<label for="societe"><b>Societe</b></label>
+					<input class="form-control" id="societe" type="text" name="societe" placeholder="societe" required>
+					<br>
+
+					<label for="addresse"><b>Adresse</b></label>
+					<input class="form-control" id="addresse" type="text" name="addresse" placeholder="adresse" required>
+					<br>
+
+					<label for="ville"><b>Ville</b></label>
+					<input class="form-control" id="ville" type="text" name="ville" placeholder="ville" required>
+					<br>
+
+					<label for="pays"><b>Pays</b></label>
+					<input class="form-control" id="pays" type="text" name="pays"  placeholder="pays" required>
+					<br>
+
+
+					<label for="email"><b>Email </b></label>
+					<input class="form-control" id="email"  type="text" name="email" placeholder="email" required>
+					<br>
+
+					<label for="telephone"><b>Telephone</b></label>
+					<input class="form-control" id="telephone"  type="text" name="telephone"  placeholder="telephone" required>
+					<br>
+
+					
+					<label for="message" id="message" title="Message"><span class="Style1"><b>Message</b></span></label>
+					<br>
+			        <textarea name="message" rows="7" cols="60" id="message" title="Message" class="textbox" text-align=center;>
+                     </textarea>
+                     <br>
+
+
+					<input class="btn btn-primary" type="submit" id="register" name="create" value="Envoyer">
+					<br>
+
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#register').click(function(e){
+
+			var valid = this.form.checkValidity();
+			if (valid) {
+				var nom 	= $('#nom').val();
+				var prenom	= $('#prenom').val();
+				var societe	= $('#societe').val();
+				var addresse= $('#addresse').val();
+				var ville	= $('#ville').val();
+				var pays	= $('#pays').val();
+				var email 	= $('#email').val();
+			  var telephone = $('#telephone').val();
+			    var message = $('#message').val();
+
+				e.preventDefault();
+				$.ajax({
+					type: 'POST',
+					url: 'process.php',
+					data: {nom: nom,prenom: prenom,
+					societe: societe,addresse: addresse,
+					ville: ville,
+					pays: pays,email: email,
+					telephone: telephone,
+					message: message},
+
+					success: function(data){
+					Swal.fire({
+								'title': 'Bien Envoyer',
+								'text': data,
+								'type': 'success'
+								})
+							
+					},
+					error: function(data){
+						Swal.fire({
+								'title': 'errors',
+								'tex':'There were errors while saving the data.',
+								'type': 'error.'
+								})
+					}
+
+				});
+				
+			}else{
+				
+			}		
+		});
+		
+	});
+</script>
+</body>
+</html>
